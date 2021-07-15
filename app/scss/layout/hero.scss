@@ -1,0 +1,27 @@
+@use "../global" as *;
+@use "../util" as *;
+
+.hero {
+  background: url(../../images/bg-curvy-mobile.svg) center no-repeat,
+    linear-gradient(to bottom, var(--dark-intro) 62%, var(--dark-main) 62%, var(--dark-main) 100%) no-repeat;
+  background-size: 100% rem(170), 100%;
+  width: 100%;
+  text-align: center;
+  color: var(--clr-white);
+  position: relative;
+  z-index: 1;
+
+  @include mq(small) {
+    background: url(../../images/bg-curvy-desktop.svg) bottom no-repeat, linear-gradient(var(--dark-intro), var(--dark-intro));
+    background-size: 100% rem(320), 100%;
+  }
+
+  &-img {
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+
+    img {
+      margin: 0 auto;
+    }
+  }
+}

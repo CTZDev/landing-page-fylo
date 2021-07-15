@@ -1,0 +1,31 @@
+@use "../util" as *;
+
+.btn {
+  min-width: rem(240);
+  border-radius: 100vw;
+  border: none;
+  outline: none;
+  padding: rem(16);
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+  transform: scale(1);
+  border: 1px solid transparent;
+  transition: transform 200ms ease, background 200ms ease;
+  font-family: var(--font-primary);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.01) translateY(-0.125em);
+  }
+
+  &-primary {
+    color: var(--clr-white);
+    background: linear-gradient(127deg, #65e2d9 -25%, #339ecc 61%);
+
+    &:hover,
+    &:focus {
+      background: #8edae2;
+    }
+  }
+}

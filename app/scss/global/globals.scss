@@ -1,3 +1,5 @@
+@use "../util" as *;
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -7,6 +9,8 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -17,6 +21,7 @@ body {
   font-family: var(--font-primary), var(--font-secondary);
   min-height: 100vh;
   text-rendering: optimizeSpeed;
+  font-size: 14px;
 }
 
 li {
@@ -25,6 +30,7 @@ li {
 
 ul {
   padding: 0;
+  margin: 0;
 }
 
 /*remove blue background when clicking*/
@@ -45,4 +51,62 @@ ol[role="list"] {
 /* Set core root defaults */
 html {
   scroll-behavior: smooth;
+}
+
+/*img*/
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+/*Flex*/
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+.none {
+  display: none;
+}
+
+/*Wrapper - Content General*/
+.u-wrapper {
+  padding-left: rem(28);
+  padding-right: rem(28);
+}
+
+.mb-paragraph {
+  margin-bottom: rem(32);
+}
+
+/*Titles, Subtitles and copy (paragraph)*/
+
+:is(.u-title, .u-subtitle) {
+  font-weight: bold;
+  margin-bottom: rem(16);
+}
+.u-title {
+  font-size: 1.8em;
+  line-height: 1.5;
+}
+
+.u-subtitle {
+  font-size: 1.4em;
+}
+
+.u-copy {
+  line-height: 1.45;
+  padding: 0 rem(12);
 }

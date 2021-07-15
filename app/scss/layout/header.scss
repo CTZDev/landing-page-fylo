@@ -1,1 +1,28 @@
 @use "../global" as *;
+@use "../util" as *;
+
+.main-header {
+  background-color: var(--dark-intro);
+}
+
+.navigation {
+  padding: rem(24) rem(16);
+
+  .logo {
+    width: 70%;
+  }
+}
+
+.menu {
+  &-item {
+    &:not(:last-child) {
+      margin-right: rem(24);
+    }
+  }
+
+  &-link {
+    display: inline-block;
+    width: max-content;
+    color: var(--clr-white);
+  }
+}
