@@ -96,3 +96,30 @@ main {
 }
 
 /*Login*/
+.login {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  &-content {
+    padding: rem(41) rem(24) rem(32);
+    background-color: var(--dark-intro);
+    border-radius: 8px;
+    box-shadow: 12px 12px 10px -6px black;
+
+    > p {
+      margin-bottom: rem(32);
+    }
+  }
+  &-inputs {
+    input:first-child {
+      margin-bottom: rem(16);
+      padding-left: rem(24);
+
+      &::placeholder {
+        color: rgba(black, 0.3);
+        font-weight: normal;
+      }
+    }
+  }
+}

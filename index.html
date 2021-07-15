@@ -124,19 +124,21 @@
           </article>
         </div>
       </section>
-      <section class="login">
-        <h4>Get Early acces Today</h4>
-        <p>
-          It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be
-          happy to help you.
-        </p>
-        <div class="login-inputs">
-          <input type="email" id="txtemail" required />
-          <input type="button" value="Get Started For Free" />
+      <section class="login u-wrapper">
+        <div class="login-content">
+          <h4 class="u-subtitle">Get Early acces Today</h4>
+          <p class="u-copy">
+            It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be
+            happy to help you.
+          </p>
+          <div class="login-inputs flex flex-fd-c flex-jc-c">
+            <input type="email" id="txtemail" class="btn" placeholder="email@example.com" required />
+            <input type="button" class="btn btn-primary" value="Get Started For Free" />
+          </div>
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer u-wrapper">
       <figure class="footer-logo">
         <img src="./images/logo.svg" alt="Logo" />
       </figure>
@@ -145,24 +147,30 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
         </div>
         <div class="footer-contact">
-          <p>+1-543-123-4567</p>
-          <p>example@fylo.com</p>
+          <p class="footer-contact-phone">+1-543-123-4567</p>
+          <p class="footer-contact-email">example@fylo.com</p>
         </div>
-        <div class="footer-about-us">
+        <div class="footer-about-us flex flex-fd-c">
           <a href="#">About Us</a>
           <a href="#">Job</a>
           <a href="#">Press</a>
           <a href="#">Blog</a>
         </div>
-        <div class="footer-contact-us">
+        <div class="footer-contact-us flex flex-fd-c">
           <a href="#">Contact Us</a>
           <a href="#">Terms</a>
           <a href="#">Privacy</a>
         </div>
-        <div class="footer-socialmedia">
-          <a href="#" target="_blank" rel="noopener noreferrer">fC</a>
-          <a href="#" target="_blank" rel="noopener noreferrer">tW</a>
-          <a href="#" target="_blank" rel="noopener noreferrer">iNS</a>
+        <div class="footer-socialmedia flex flex-jc-c flex-ai-c">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
         </div>
       </div>
     </footer>
