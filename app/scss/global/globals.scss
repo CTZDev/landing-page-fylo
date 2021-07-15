@@ -75,6 +75,9 @@ picture {
   &-ai-c {
     align-items: center;
   }
+  &-fd-c {
+    flex-direction: column;
+  }
 }
 
 .none {
@@ -83,12 +86,17 @@ picture {
 
 /*Wrapper - Content General*/
 .u-wrapper {
-  padding-left: rem(28);
-  padding-right: rem(28);
+  padding-left: rem(24);
+  padding-right: rem(24);
 }
 
 .mb-paragraph {
   margin-bottom: rem(32);
+}
+
+.pd-tb-default {
+  padding-top: rem(24);
+  padding-bottom: rem(128);
 }
 
 /*Titles, Subtitles and copy (paragraph)*/
@@ -98,15 +106,15 @@ picture {
   margin-bottom: rem(16);
 }
 .u-title {
-  font-size: 1.8em;
-  line-height: 1.5;
+  font-size: 1.7em;
+  line-height: 1.6;
 }
 
 .u-subtitle {
-  font-size: 1.4em;
+  font-size: 1.3em;
 }
 
 .u-copy {
-  line-height: 1.45;
-  padding: 0 rem(12);
+  line-height: 1.5;
+  font-family: var(--font-secondary);
 }
