@@ -51,7 +51,7 @@
       }
 
       &::before {
-        content: url("../../images/icon-location.svg");
+        content: url("../images/icon-location.svg");
         margin-left: rem(-32);
         margin-right: rem(16);
       }
@@ -78,13 +78,13 @@
       margin-bottom: rem(16);
 
       &::before {
-        content: url("../../images/icon-phone.svg");
+        content: url("../images/icon-phone.svg");
       }
     }
 
     &-email {
       &::before {
-        content: url("../../images/icon-email.svg");
+        content: url("../images/icon-email.svg");
       }
     }
   }

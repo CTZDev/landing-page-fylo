@@ -2,7 +2,7 @@
 @use "../util" as *;
 
 .hero {
-  background: url(../../images/bg-curvy-mobile.svg) center no-repeat,
+  background: url(../images/bg-curvy-mobile.svg) center no-repeat,
     linear-gradient(to bottom, var(--dark-intro) 58%, var(--dark-main) 58%, var(--dark-main) 100%) no-repeat;
   background-size: 100% rem(180), 100%;
   width: 100%;
@@ -11,7 +11,7 @@
   position: relative;
 
   @include mq(small) {
-    background: url(../../images/bg-curvy-desktop.svg) bottom no-repeat, linear-gradient(var(--dark-intro), var(--dark-intro));
+    background: url(../images/bg-curvy-desktop.svg) bottom no-repeat, linear-gradient(var(--dark-intro), var(--dark-intro));
     background-size: 100% rem(400), 100%;
   }
 
