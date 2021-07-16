@@ -7,6 +7,11 @@
 
 .navigation {
   padding: rem(24);
+  @include maxLength;
+
+  @include mq(small) {
+    padding: rem(64) rem(36) rem(16);
+  }
 
   .logo {
     width: 70%;

@@ -21,7 +21,15 @@ body {
   font-family: var(--font-primary), var(--font-secondary);
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  font-size: 14px;
+  font-size: 0.875rem;
+
+  @include mq(small) {
+    font-size: 0.9375rem;
+  }
+
+  @include mq(medium) {
+    font-size: 1rem;
+  }
 }
 
 li {
@@ -108,10 +116,18 @@ picture {
 .u-title {
   font-size: 1.7em;
   line-height: 1.6;
+
+  @include mq(medium) {
+    font-size: 2.1em;
+  }
 }
 
 .u-subtitle {
   font-size: 1.3em;
+
+  @include mq(medium) {
+    font-size: 1.5em;
+  }
 }
 
 .u-copy {

@@ -9,45 +9,74 @@
   padding-bottom: rem(44);
   font-family: var(--font-secondary);
 
+  @include mq(medium) {
+    padding-left: rem(120);
+    padding-right: rem(120);
+  }
+
   &-logo {
     margin-bottom: rem(32);
+    @include maxLength;
   }
 
   &-content {
     display: grid;
     grid-template-columns: 1fr;
+    @include maxLength;
+
+    @include mq(small) {
+      text-align: center;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq(medium) {
+      grid-template-columns: repeat(7, 1fr);
+      align-items: flex-start;
+      column-gap: rem(16);
+    }
   }
 
   &-location {
     margin-bottom: rem(24);
-    padding-left: rem(32);
-    position: relative;
 
-    &::before {
-      content: url("../../images/icon-location.svg");
-      position: absolute;
-      top: 6px;
-      left: 0;
+    @include mq(medium) {
+      grid-column: 1 / 3;
+    }
+
+    &-dot {
+      padding-left: rem(32);
+
+      @include mq(medium) {
+        text-align: left;
+      }
+
+      &::before {
+        content: url("../../images/icon-location.svg");
+        margin-left: rem(-32);
+        margin-right: rem(16);
+      }
     }
   }
 
   &-contact {
     margin-bottom: rem(75);
 
+    @include mq(medium) {
+      text-align: left;
+      grid-column: 3 / 5;
+      justify-self: center;
+    }
+
     &-phone,
     &-email {
-      padding-left: rem(32);
-      position: relative;
-
       &::before {
-        position: absolute;
-        top: 4px;
-        left: 0;
+        margin-right: rem(16);
       }
     }
 
     &-phone {
       margin-bottom: rem(16);
+
       &::before {
         content: url("../../images/icon-phone.svg");
       }
@@ -88,6 +117,14 @@
 
   &-socialmedia {
     gap: rem(16);
+
+    @include mq(small) {
+      grid-column: 1 / -1;
+    }
+
+    @include mq(medium) {
+      grid-column: initial;
+    }
 
     > a {
       display: inline-flex;

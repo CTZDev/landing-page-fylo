@@ -2,12 +2,34 @@
 $breakpoints: (
   small: 40em,
   medium: 64em,
-  large: 87.5em,
+  large: 90em,
 );
 
 @mixin mq($key) {
   $size: map-get($breakpoints, $key);
   @media only screen and (min-width:#{$size}) {
     @content;
+  }
+}
+
+//Mixin para mayor longitud
+@mixin maxLength {
+  max-width: map-get($breakpoints, large);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//Gap-Space-padding
+@mixin gapPadding {
+  @include mq(small) {
+    gap: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @include mq(medium) {
+    gap: 4.5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }
