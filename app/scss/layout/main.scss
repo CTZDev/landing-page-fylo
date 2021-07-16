@@ -59,6 +59,13 @@ main {
     color: var(--cyan-grad);
     padding-bottom: rem(6);
     border-bottom: 1px solid var(--cyan-grad);
+    transition: color 200ms ease-in-out, border-bottom 200ms ease-in-out;
+
+    &:hover,
+    &:focus {
+      color: var(--clr-white);
+      border-bottom: 1px solid var(--clr-white);
+    }
 
     &::after {
       font-family: "Font Awesome 5 Free";

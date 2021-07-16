@@ -111,7 +111,13 @@
     grid-row-gap: rem(20);
 
     > a {
+      display: inline-block;
       color: var(--clr-white);
+
+      &:hover,
+      &:focus {
+        font-weight: bold;
+      }
     }
   }
 
@@ -135,11 +141,34 @@
       height: 30px;
       align-items: center;
       justify-content: center;
-      font-size: 0.9rem;
+      font-size: 1rem;
+      transition: color 200ms ease, border 200ms ease, background 200ms ease;
 
       > i {
         pointer-events: none;
       }
     }
+
+    &-fcb:hover {
+      border: 1px solid #0777e7;
+      background: #0777e7;
+    }
+    &-twt:hover {
+      border: 1px solid #059aee;
+      background: #059aee;
+    }
+
+    &-ins:hover {
+      border: 1px solid purple;
+      background: linear-gradient(0deg, yellow, red, purple);
+    }
   }
+}
+
+.about-me {
+  text-align: center;
+  padding: rem(24);
+  color: var(--clr-white);
+  background-color: var(--dark-intro);
+  font-size: rem(18);
 }

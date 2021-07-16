@@ -29,5 +29,13 @@
     display: inline-block;
     width: max-content;
     color: var(--clr-white);
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 200ms ease-in, font-weight 200ms ease-in;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid var(--clr-white);
+      font-weight: bold;
+    }
   }
 }
