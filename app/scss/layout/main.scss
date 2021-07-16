@@ -32,8 +32,11 @@ main {
 .team {
   @include maxLength;
   @include gapPadding;
-  flex-direction: row;
   gap: rem(64);
+
+  @include mq(small) {
+    flex-direction: row;
+  }
 
   &-img {
     margin-bottom: rem(32);
